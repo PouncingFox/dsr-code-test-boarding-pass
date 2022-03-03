@@ -1,0 +1,261 @@
+html {
+  background-color: lightgray;
+}
+article {
+  background-color: white;
+  width: 60%;
+  padding: 50px;
+  margin: 50px auto;
+  border-radius: 20px;
+  -webkit-box-shadow: 10px 10px 25px -13px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 25px -13px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 25px -13px rgba(0,0,0,0.75);
+  font-family: "Arial Black", sans-serif;
+}
+
+/* Utilities */
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.center {
+  text-align: center;
+}
+.col-half {
+  width: 50%;
+  flex: 0 0 50%;
+}
+.col-third {
+  width: 33%;
+  flex: 0 0 33%;
+}
+.col-fourth {
+  width: 25%;
+  flex: 0 0 25%;
+}
+
+/* Header */
+header {
+  display: flex;
+}
+header img {
+  width: 80%;
+}
+header h1 {
+  font-size: 3rem;
+  margin-top: 35px;
+  transform: rotate(90deg);
+}
+
+/* Destination */
+#destination {
+  margin-top: 100px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+}
+#destination h2 {
+  font-size: 5rem;
+  font-weight: bold;
+}
+#destination p {
+  font-size: 1.4rem;
+}
+#destination .center-col {
+  text-align: right;
+  display: flex;
+  align-items: center;
+}
+#destination .line {
+  width: 100%;
+  border-top: 4px solid black;
+}
+#destination img  {
+  width: 15%;
+}
+
+/* Info */
+#info {
+  margin-top: 50px;
+}
+#info .col-third p {
+  font-size: 3rem;
+}
+#info .col-fourth p {
+  font-size: 2rem;
+}
+#info .row {
+  margin-bottom: 75px;
+  text-align: center;
+}
+#info h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #183D6E;
+}
+#info .inline {
+  display: flex;
+  align-items: center;
+}
+#info .seat img {
+  width: 10%;
+}
+#info sub {
+  font-size: 1rem;
+}
+
+/* Technical */
+#technical {
+  margin-top: 50px;
+}
+#technical .barcode {
+  width: 38%;
+  margin: 0 auto 20px auto;
+  display: block;
+}
+#technical .center {
+  margin-top: 50px;
+}
+
+/* Media Queries */
+@media (min-width: 992px) and (max-width: 1300px) {
+  html {
+    font-size: 10px;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  html {
+    font-size: 12px;
+    text-align: center;
+  }
+  article {
+    width: 90%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .col-fourth {
+    width: 50%;
+    flex: 0 0 50%;
+    padding: 0;
+    margin-bottom: 30px;
+  }
+  .col-half {
+    width: 50%;
+    flex: 0 0 50%;
+    padding: 0;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 12px;
+    text-align: center;
+  }
+  article {
+    width: 90%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  header {
+    display: block;
+  }
+  header img {
+    width: 100%;
+  }
+  header h1 {
+    transform: rotate(0);
+    text-align: center;
+  }
+  #destination h2 {
+    font-size: 3.5rem;
+  }
+  #destination img {
+    width: 32%;
+  }
+  #technical .barcode {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+}
+@media (max-width: 576px) {
+  .row {
+    flex-direction: column;
+  }
+  .col-half {
+    width: 100%;
+    flex: 0 0 100%;
+    padding: 0;
+    margin-bottom: 30px;
+  }
+  .col-fourth {
+    width: 100%;
+    flex: 0 0 100%;
+    padding: 0;
+    margin-bottom: 30px;
+  }
+  #info .col-third {
+    width: 100%;
+    flex: 0 0 100%;
+    padding: 0;
+    margin-bottom: 30px;
+  }
+  #info .col-fourth p {
+    font-size: 2.5rem;
+  }
+  #technical .center {
+    margin-top: 0;
+  }
+}
+
+/* Print */
+@media print {
+  html {
+    font-size: 9px;
+  }
+  article {
+    box-shadow: none;
+  }
+  .row {
+    display: flex;
+    flex-direction: row;
+  }
+  .col-half {
+    width: 50%;
+    flex: 0 0 50%;
+    margin-bottom: 0;
+  }
+  .col-fourth {
+    width: 25%;
+    flex: 0 0 25%;
+    margin-bottom: 0;
+  }
+  #info .col-third {
+    width: 33%;
+    flex: 0 0 33%;
+    margin-bottom: 0;
+  }
+  header {
+    margin-bottom: -50px;
+  }
+  header img {
+    width: 400px;
+  }
+  #destination h2 {
+    font-size: 5rem;
+  }
+  #destination img {
+    width: 30px;
+  }
+  #destination .line {
+    width: 200px;
+  }
+  #info .row {
+    margin-bottom: 25px;
+  }
+  #technical .barcode {
+    width: 300px;
+  }
+}
